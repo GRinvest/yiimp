@@ -76,7 +76,8 @@ function yaamp_get_algos()
 		'yescryptR16',
 		'yescryptR32',
 		'whirlpool',
-		'zr5',
+        'zr5',
+        'honeycomb',
 	);
 }
 
@@ -216,7 +217,8 @@ function getAlgoColors($algo)
 		'yescrypt'	=> '#e0d0e0',
 		'yescryptR16'	=> '#e2d0e2',
 		'yescryptR32'	=> '#e2d0d2',
-		'zr5'		=> '#d0b0d0',
+        'zr5'		=> '#d0b0d0',
+        'honeycomb'		=> '#c0f0c0',
 
 		'MN'		=> '#ffffff', // MasterNode Earnings
 		'PoS'		=> '#ffffff'  // Stake
@@ -305,7 +307,8 @@ function getAlgoPort($algo)
 		'polytimos'	=> 8463,
 		'skunk'		=> 8433,
 		'tribus'	=> 8533,
-	        'a5a'   	=> 8633,
+            'a5a'   	=> 8633,
+            'honeycomb'	=> 7777,
 	);
 
 	global $configCustomPorts;

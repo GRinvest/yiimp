@@ -221,7 +221,17 @@ function BackendCoinsUpdate()
 				if ($coin->auto_ready && arraySafeVal($wi,"unlocked",false) == false) {
 					debuglog($coin->symbol." wallet is not unlocked!");
 				}
-			}
+            }
+
+            else if($coin->symbol == 'BNODE') {
+                if(isset($template['masternode'])) {
+                    if (arraySafeVal($template,'masternode_payments_started'))
+                    $coin->reward -= arraySafeVal($template['masternode'],'amount',0)/100000000;
+                }
+                if(isset($template['evolution'])) {
+                    $coin->reward -= arraySafeVal($template['evolution'],'amount',10000000)/100000000;
+                }
+            }
 
 			else
 			{
